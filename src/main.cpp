@@ -5,22 +5,22 @@
 
 const int STANDARD_DEVIATION = 3.5; // deviation in percent 1 ~= 10
 
-const int VOL_DOWN = 915;
+const int VOL_DOWN = 970;
 const int VOL_DOWN_DELAY = 150;
 
-const int VOL_UP = 860;
+const int VOL_UP = 890;
 const int VOL_UP_DELAY = 150;
 
-const int UP = 705;
+const int UP = 783;
 const int UP_DELAY = 150;
 
-const int DOWN = 625;
+const int DOWN = 650;
 const int DOWN_DELAY = 150;
 
-const int MODE = 475;
+const int MODE = 496;
 const int MODE_DELAY = 150;
 
-const int MUTE = 406;
+const int MUTE = 331;
 const int MUTE_DELAY = 150;
 
 void setup()
@@ -33,7 +33,8 @@ void setup()
 void loop()
 {
   int value = analogRead(ANALOG_PIN);
-  // Serial.println(VOL_DOWN * ((100.0 - STANDARD_DEVIATION) / 100.0));
+  //Serial.println(value);
+  //Serial.println(VOL_DOWN * ((100.0 - STANDARD_DEVIATION) / 100.0));
   delay(10);
   if (value >= VOL_DOWN * ((100.0 - STANDARD_DEVIATION) / 100.0) && value <= VOL_DOWN * ((100.0 + STANDARD_DEVIATION) / 100.0))
   {
